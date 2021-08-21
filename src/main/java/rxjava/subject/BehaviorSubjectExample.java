@@ -1,0 +1,21 @@
+package rxjava.subject;
+
+import io.reactivex.subjects.BehaviorSubject;
+
+public class BehaviorSubjectExample {
+    public static void main(String[] args) {
+        BehaviorSubject<String> subject = BehaviorSubject.createDefault("BLUE");
+        subject.subscribe(data -> System.out.println("subscribe #1 : " + data));
+        subject.onNext("RED");
+        subject.onNext("GREEN");
+        subject.subscribe(data -> System.out.println("subscribe #2 : " + data));
+        subject.onNext("WHITE");
+        subject.onComplete();
+    }
+}
+// subscribe #1 : BLUE
+// subscribe #1 : RED
+// subscribe #1 : GREEN
+// subscribe #2 : GREEN
+// subscribe #1 : WHITE
+// subscribe #2 : WHITE
