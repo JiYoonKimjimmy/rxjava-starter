@@ -12,10 +12,12 @@ public class ConnectableObservableSample {
                 .map(Long::intValue)
                 .map(i -> arr[i])
                 .take(arr.length);
+
+        // ConnectableObservable : 득정 시점부터 데이터를 발행 및 구독 처리
         ConnectableObservable<String> source = observable.publish();
         source.subscribe(data -> System.out.println("subscribe #1 : " + data));
         source.subscribe(data -> System.out.println("subscribe #2 : " + data));
-        source.connect();
+        source.connect();       // 데이터 발행 start
 
         Thread.sleep(200);
         source.subscribe(data -> System.out.println("subscribe #3 : " + data));

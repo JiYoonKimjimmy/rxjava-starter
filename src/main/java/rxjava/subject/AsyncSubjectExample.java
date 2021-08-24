@@ -10,6 +10,7 @@ public class AsyncSubjectExample {
     }
 
     private static void example01() {
+        // AsyncSubject : Observable 에서 발행한 마지막 데이터 구독
         AsyncSubject<String> subject = AsyncSubject.create();
         subject.subscribe(data -> System.out.println("subscribe #1 : " + data));
         subject.onNext("one");

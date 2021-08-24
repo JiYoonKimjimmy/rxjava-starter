@@ -4,6 +4,7 @@ import io.reactivex.subjects.BehaviorSubject;
 
 public class BehaviorSubjectExample {
     public static void main(String[] args) {
+        // BehaviorSubject : 구독하는 순간 최근 데이터 or 기본값 데이터를 발행 및 구독 처리
         BehaviorSubject<String> subject = BehaviorSubject.createDefault("BLUE");
         subject.subscribe(data -> System.out.println("subscribe #1 : " + data));
         subject.onNext("RED");
