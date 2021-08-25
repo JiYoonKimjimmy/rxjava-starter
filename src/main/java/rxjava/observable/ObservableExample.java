@@ -1,8 +1,8 @@
-package rxjava.basic;
+package rxjava.observable;
 
 import io.reactivex.Observable;
 
-public class Basic01 {
+public class ObservableExample {
     public static void main(String[] args) {
         emit();
     }
