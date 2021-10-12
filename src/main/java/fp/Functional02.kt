@@ -1,4 +1,4 @@
-package rxjava.uitl
+package fp
 
 fun main() {
     val f1: () -> Unit = { println("Function 1") }
@@ -6,6 +6,7 @@ fun main() {
 
     testFunction(f1) {
         f1()
+        f2()
     }
 
     val test: (Int, Int) -> Int = fun(a, b) = a + b

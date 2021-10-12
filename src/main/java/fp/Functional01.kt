@@ -1,4 +1,4 @@
-package rxjava.uitl
+package fp
 
 fun main() {
     val list = listOf(1, 2, 3)
