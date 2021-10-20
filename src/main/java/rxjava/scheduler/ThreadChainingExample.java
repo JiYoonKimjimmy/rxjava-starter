@@ -2,6 +2,7 @@ package rxjava.scheduler;
 
 import io.reactivex.Observable;
 import io.reactivex.schedulers.Schedulers;
+import rxjava.uitl.PrintUtil;
 
 import java.util.Arrays;
 import java.util.List;
@@ -37,15 +38,5 @@ class Figure {
     public Figure(String color, String shape) {
         this.color = color;
         this.shape = shape;
-    }
-}
-
-class PrintUtil {
-    static void printData(String message) {
-        System.out.println("" + Thread.currentThread().getName() + " | " + message);
-    }
-
-    static void printData(String message, Object obj) {
-        System.out.println("" + Thread.currentThread().getName() + " | " + message + " | " + obj.toString());
     }
 }

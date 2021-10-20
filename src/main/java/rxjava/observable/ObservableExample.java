@@ -1,6 +1,7 @@
 package rxjava.observable;
 
 import io.reactivex.Observable;
+import rxjava.uitl.PrintUtil;
 
 public class ObservableExample {
     public static void main(String[] args) {
@@ -14,6 +15,6 @@ public class ObservableExample {
          * subscribe() : Observable 를 구독하며 발행된 데이터를 소비
          */
         Observable.just("Hello", "RxJava")
-                .subscribe(System.out::println);
+                .subscribe(PrintUtil::printData);
     }
 }

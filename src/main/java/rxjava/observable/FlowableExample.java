@@ -7,8 +7,8 @@ import rxjava.uitl.PrintUtil;
 
 public class FlowableExample {
     public static void main(String[] args) throws Exception {
-//        backPressure();
-        noBackPressure();
+        backPressure();
+//        noBackPressure();
     }
 
     private static void backPressure() throws Exception {
