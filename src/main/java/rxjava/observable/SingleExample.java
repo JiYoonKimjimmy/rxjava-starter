@@ -4,6 +4,7 @@ import io.reactivex.Single;
 import io.reactivex.SingleEmitter;
 import io.reactivex.SingleOnSubscribe;
 import io.reactivex.annotations.NonNull;
+import rxjava.uitl.PrintUtil;
 
 public class SingleExample {
     public static void main(String[] args) {
